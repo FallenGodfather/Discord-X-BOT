@@ -1,0 +1,15 @@
+{
+  "name": "discord-bot",
+  "version": "1.0.0",
+  "description": "XENIOUR's Den Personal BOT",
+  "main": "Bot.js",
+  "scripts": {
+    "start": "node Bot.js"
+  },
+  "author": "Bearded_Spartan",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^11.5.1"
+    "request" : "2.81.0"
+  }
+}
