@@ -1,6 +1,6 @@
 {
     const botName = 'X-Bot';
-    const botVersion = '1.0.3';
+    const botVersion = '10.0.6';
     const botDescript = 'Personal-Bot for the Xeniour\'s';
     const {Client, Attachment} = require('discord.js');
     const Discord = require('discord.js');
@@ -95,8 +95,9 @@
         let embed = new Discord.RichEmbed();
         embed.setTitle('User Profile');
         embed.addField('Server Name:',msg.guild.name);
-        embed.addField(msg.guild.iconURL,msg.author.username);
+        embed.addField('Member Name: ',msg.author.username);
         embed.setThumbnail(msg.author.avatarURL);
+        embed.setImage(msg.guild.iconURL);
         embed.setColor(msg.member.highestRole.color);
         msg.channel.send(embed).then(msg=> msg.delete(7000));
     }
