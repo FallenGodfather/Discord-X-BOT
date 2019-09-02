@@ -126,9 +126,9 @@
     function delMessages(msg){
         if((msg.member.roles.find(r => r.name === 'Administrator')) || (msg.member.roles.find(r => r.name === 'Moderator'))){
             if(!command[1]){
-                msg.channel.bulkDelete(2).catch(console.error);
+                msg.channel.bulkDelete(2);
             }else{
-                msg.channel.bulkDelete(command[1]).catch(console.error);
+                msg.channel.bulkDelete(command[1]);
             }
         }else{
             return msg.reply('Command Require Administrator privileges').then(msg => msg.delete(5000));
